@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\User; // 追加
+use App\User; 
 
 class UsersController extends Controller
 {
@@ -82,6 +82,25 @@ class UsersController extends Controller
         return view('users.followers', [
             'user' => $user,
             'users' => $followers,
+        ]);
+    }
+    
+    //favoritesを表示する
+    public function favorites($id)
+    {
+        // idの値でユーザを検索して取得
+        $user = User::findOrFail($id);
+
+        // 関係するモデルの件数をロード
+        $user->loadRelationshipCounts();
+
+        // ユーザのfavorites一覧を取得
+        $favorites = $user->favorites()->paginate(10);
+
+        // favorites一覧ビューでそれらを表示
+        return view('favorites.favorite', [
+            'favorites' => $favorites,
+            'favorite' => $favorite,
         ]);
     }
     
