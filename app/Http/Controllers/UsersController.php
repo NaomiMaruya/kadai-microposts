@@ -104,4 +104,29 @@ class UsersController extends Controller
         ]);
     }
     
+    public function personalIndex($id){
+        $auth = \Auth::user();
+        $user = User::findOrFail($id);
+        return view('users.personalIndex',['auth' => $auth]);
+    }
+    
+   
+    public function edit($id){
+        $user = User::findOrFail($id);
+        return view('users.edit', ['user' => $user]);
+    }
+    
+    public function update(Request $request, $id)
+    {
+        // idの値でメッセージを検索して取得
+        $user = User::findOrFail($id);
+        // メッセージを更新
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+
+        // トップページへリダイレクトさせる
+        return redirect('/');
+    }
+        
 }

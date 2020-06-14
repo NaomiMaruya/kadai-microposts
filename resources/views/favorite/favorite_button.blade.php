@@ -6,6 +6,6 @@
     @else
         {{-- フェイバリッドボタンのフォーム --}}
         {!! Form::open(['route' => ['favorites.favorite', $micropost->id]]) !!}
-            {!! Form::submit('Favorite', ['class' => "btn btn-outline-info btn-block btn-sm"]) !!}
+            {!! Form::submit('Favorite', ['class' => "btn btn-outline-success btn-block btn-sm"]) !!}
         {!! Form::close() !!}
     @endif

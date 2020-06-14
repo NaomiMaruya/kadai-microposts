@@ -1,3 +1,5 @@
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+
 @if (count($users) > 0)
     <ul class="list-unstyled">
         @foreach ($users as $user)
@@ -10,7 +12,9 @@
                     </div>
                     <div>
                         {{-- ユーザ詳細ページへのリンク --}}
-                        <p>{!! link_to_route('users.show', 'View profile', ['user' => $user->id]) !!}</p>
+                        
+                        {!! link_to_route('users.show', 'View profile', ['user' => $user->id]) !!}
+                      
                     </div>
                 </div>
             </li>
