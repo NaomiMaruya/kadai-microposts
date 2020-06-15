@@ -30,7 +30,7 @@ return [
         'array' => 'The :attribute must have between :min and :max items.',
     ],
     'boolean' => 'The :attribute field must be true or false.',
-    'confirmed' => 'The :attribute confirmation does not match.',
+    'confirmed' => ':attributeの確認が正しくありません。',
     'date' => 'The :attribute is not a valid date.',
     'date_equals' => 'The :attribute must be a date equal to :date.',
     'date_format' => 'The :attribute does not match the format :format.',
@@ -79,15 +79,15 @@ return [
     'max' => [
         'numeric' => 'The :attribute may not be greater than :max.',
         'file' => 'The :attribute may not be greater than :max kilobytes.',
-        'string' => 'The :attribute may not be greater than :max characters.',
+        'string' => ':attributeは:max文字以下にして下さい。',
         'array' => 'The :attribute may not have more than :max items.',
     ],
     'mimes' => 'The :attribute must be a file of type: :values.',
     'mimetypes' => 'The :attribute must be a file of type: :values.',
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
-        'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => 'The :attribute must be at least :min characters.',
+        'file' => ':attribute must be at least :min kilobytes.',
+        'string' => ':attributeは:min文字以上にしてください。',
         'array' => 'The :attribute must have at least :min items.',
     ],
     'not_in' => 'The selected :attribute is invalid.',
@@ -96,6 +96,7 @@ return [
     'password' => 'パスワードが正しくありません。',
     'present' => ':attributeは既定の値である必要があります。',
     'regex' => ':attributeのフォーマットが正しくありません。',
+    //'required' => ':attributeの入力は必須です。',
     'required' => ':attributeの入力は必須です。',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
@@ -146,6 +147,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'content' => '内容',
+        'name' => '名前',
+        'email' => 'メールアドレス',
+        'password' => 'パスワード'
+    ],
 
 ];

@@ -15,7 +15,7 @@
                 {!! Form::label('email', __('messages.Email')) !!}
                 {!! Form::text('email', null, ['class' => 'form-control']) !!}
             </div>
-        {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit(__('messages.Update'), ['class' => 'btn btn-primary']) !!}
         </div>
     </div>
 

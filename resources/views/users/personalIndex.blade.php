@@ -1,4 +1,5 @@
     @include('layouts.app')
+    
     <div class="container">
         <h2>{{ __('messages.UserInfo')}}</h2>
         <img class="rounded img-fluid" src="{{ Gravatar::get($auth->email, ['size' => 200]) }}" alt="">
@@ -19,7 +20,10 @@
         <td>{{ __('messages.Createdat')}}</td>
         <td>{{Auth::user()->created_at}}</td>
         </tr>
-        
+        </table>
         {{-- 設定を変更する --}}
-        <div>{!! link_to_route('users.edit',__('messages.ModifyyourUserInfo'), ['user' => Auth::id()]) !!}</div>
+    <div class="text-center">{!! link_to_route('users.edit',__('messages.ModifyyourUserInfo'), ['user' => Auth::id()],['class' => 'btn btn-info']) !!}</div>
+ 
     </div>
+        
+    

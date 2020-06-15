@@ -31,5 +31,6 @@ return [
     'Createdat' => 'Created at',
     'ModifyyourUserInfo' => 'Modify your User Info',
     'Viewprofile' => 'View profile',
-    'languages' => 'languages'
+    'languages' => 'languages',
+    'Update' => 'Update'
 ];

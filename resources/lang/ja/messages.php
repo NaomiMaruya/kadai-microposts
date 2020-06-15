@@ -31,5 +31,6 @@ return [
     'Createdat' => 'アカウント作成日',
     'ModifyyourUserInfo' => '登録情報を変更する',
     'Viewprofile' => 'プロフィールを見る',
-    'languages' => '言語'
+    'languages' => '言語',
+    'Update' => '変更する'
 ];
