@@ -22,6 +22,9 @@ Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
+// 言語切替
+Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
+
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'users/{id}'], function () {
         Route::post('follow', 'UserFollowController@store')->name('user.follow');

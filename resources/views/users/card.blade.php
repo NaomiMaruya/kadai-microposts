@@ -6,7 +6,7 @@
         <!--<button type="button" class="btn btn-light">-->
            
             <i class="fas fa-cog"></i>
-           <span>{!! link_to_route('users.personalIndex','myaccount', ['id'=>Auth::id()]) !!}</span>
+           <span>{!! link_to_route('users.personalIndex',__('messages.myaccount'), ['id'=>Auth::id()]) !!}</span>
           
         <!--</button>-->
     </div>

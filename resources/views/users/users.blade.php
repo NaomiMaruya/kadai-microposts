@@ -13,7 +13,7 @@
                     <div>
                         {{-- ユーザ詳細ページへのリンク --}}
                         
-                        {!! link_to_route('users.show', 'View profile', ['user' => $user->id]) !!}
+                        {!! link_to_route('users.show', __('messages.Viewprofile'), ['user' => $user->id]) !!}
                       
                     </div>
                 </div>

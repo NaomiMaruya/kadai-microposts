@@ -8,7 +8,7 @@
                     <div>
                         {{-- 投稿の所有者のユーザ詳細ページへのリンク --}}
                         {!! link_to_route('users.show', $micropost->user->name, ['user' => $micropost->user->id]) !!}
-                        <span class="text-muted">posted at {{ $micropost->created_at }}</span>
+                        <span class="text-muted">{{ __('messages.postedat') }}{{ $micropost->created_at }}</span>
                     </div>
                     <div>
                         {{-- 投稿内容 --}}
@@ -20,7 +20,7 @@
                             @if (Auth::id() == $micropost->user_id)
                                 {{-- 投稿削除ボタンのフォーム --}}
                                 {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
-                                {!! Form::submit('Delete', ['class' => 'btn btn-outline-danger btn-sm']) !!}
+                                {!! Form::submit( __('messages.Delete'), ['class' => 'btn btn-outline-danger btn-sm']) !!}
                                 {!! Form::close() !!}
                             @endif
                         </div>

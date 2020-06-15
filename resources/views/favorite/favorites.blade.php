@@ -7,7 +7,7 @@
                     <div>
                         {{-- 投稿の所有者のユーザ詳細ページへのリンク --}}
                         {!! link_to_route('users.show', $favorite->user->name, ['user' => $favorite->user->id]) !!}
-                        <span class="text-muted">posted at {{ $favorite->created_at }}</span>
+                        <span class="text-muted">{{ __('messages.postedat') }} {{ $favorite->created_at }}</span>
                     </div>
                     <div>
                         {{-- 投稿内容 --}}
