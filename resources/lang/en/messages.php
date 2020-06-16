@@ -21,7 +21,7 @@ return [
     'Post' => 'Post',
     'Follow' => 'Follow',
     'Unfollow' => 'Unfollow',
-    'myaccount' => 'myaccount',
+    'myaccount' =>  'my account',
     'modifyinfo' => ': Modify User Info',
     'TimeLine' => 'Timeline',
     'Followings' => 'Followings',
@@ -32,5 +32,7 @@ return [
     'ModifyyourUserInfo' => 'Modify your User Info',
     'Viewprofile' => 'View profile',
     'languages' => 'Languages',
-    'Update' => 'Update'
+    'Update' => 'Update',
+    'deleteaccount' => 'Delete your Account'
 ];
+

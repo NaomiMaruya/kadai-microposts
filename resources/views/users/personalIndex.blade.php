@@ -23,7 +23,11 @@
         </table>
         {{-- 設定を変更する --}}
     <div class="text-center">{!! link_to_route('users.edit',__('messages.ModifyyourUserInfo'), ['user' => Auth::id()],['class' => 'btn btn-info']) !!}</div>
- 
+    <div class="text-center">OR</div>
+    <div class="text-center">{!! Form::open(['route' => ['users.destroy', Auth::id()], 'method' => 'delete']) !!}
+                                {!! Form::submit(__('messages.deleteaccount'), ['class' => 'btn btn-warning']) !!}
+                            {!! Form::close() !!}
+                            </div>
     </div>
         
     

@@ -1,13 +1,12 @@
-<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+
 
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">{{ $user->name }}</h3>
         <!--<button type="button" class="btn btn-light">-->
-           
-            <i class="fas fa-cog"></i>
-           <span>{!! link_to_route('users.personalIndex',__('messages.myaccount'), ['id'=>Auth::id()]) !!}</span>
-          
+           @if (Auth::id() == $user->id)
+           {!! link_to_route('users.personalIndex',__('messages.myaccount'), ['id'=>Auth::id()],['class' => 'btn btn-outline-info']) !!}
+           @endif
         <!--</button>-->
     </div>
     <div class="card-body">

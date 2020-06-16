@@ -32,5 +32,6 @@ return [
     'ModifyyourUserInfo' => '登録情報を変更する',
     'Viewprofile' => 'プロフィールを見る',
     'languages' => '言語',
-    'Update' => '変更する'
+    'Update' => '変更する',
+    'deleteaccount' => 'アカウントを削除する'
 ];
