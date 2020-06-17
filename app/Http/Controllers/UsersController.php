@@ -118,9 +118,22 @@ class UsersController extends Controller
     
     public function update(Request $request, $id)
     {
-         $request->validate([
-            'email' => ['required', 'string', 'email', 'max:255'],
-        ]);
+       
+        //  $request->validate([
+        // 'email' => ['required', 'string', 'email', 'max:255']
+        // ]);
+            //  前のemailと同じならそのまま、違えばunique適用
+         $auth = \Auth::user();
+            if ($auth->email === $request->email){
+                $request->validate([
+                'email' => ['required', 'string', 'email', 'max:255']
+                ]);
+            }else{
+                $request->validate([
+                'email' => ['required', 'string', 'email', 'max:255','unique:users']
+                ]);
+            }
+        // ]);
         // idの値でメッセージを検索して取得
         $user = User::findOrFail($id);
         // メッセージを更新

@@ -33,6 +33,7 @@ return [
     'Viewprofile' => 'View profile',
     'languages' => 'Languages',
     'Update' => 'Update',
-    'deleteaccount' => 'Delete your Account'
+    'deleteaccount' => 'Delete your Account',
+    'OR' => 'OR'
 ];
 

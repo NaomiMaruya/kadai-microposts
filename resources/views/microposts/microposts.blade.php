@@ -8,7 +8,7 @@
                     <div>
                         {{-- 投稿の所有者のユーザ詳細ページへのリンク --}}
                         {!! link_to_route('users.show', $micropost->user->name, ['user' => $micropost->user->id]) !!}
-                        <span class="text-muted">{{ __('messages.postedat') }}{{ $micropost->created_at }}</span>
+                        <span class="text-muted ml-2">{{ __('messages.postedat') }}{{ $micropost->created_at }}</span>
                     </div>
                     <div>
                         {{-- 投稿内容 --}}

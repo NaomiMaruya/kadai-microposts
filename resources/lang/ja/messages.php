@@ -17,7 +17,7 @@ return [
     'Unfavorite' => 'お気に入りから外す',
     'Favorite' => 'お気に入り',
     'Delete' => '削除',
-    'postedat' => '作成日 ',
+    'postedat' => '投稿日',
     'Post' => '投稿',
     'Follow' => 'フォロー',
     'Unfollow' => 'フォローを外す',
@@ -33,5 +33,6 @@ return [
     'Viewprofile' => 'プロフィールを見る',
     'languages' => '言語',
     'Update' => '変更する',
-    'deleteaccount' => 'アカウントを削除する'
+    'deleteaccount' => 'アカウントを削除する',
+    'OR' => 'もしくは'
 ];
