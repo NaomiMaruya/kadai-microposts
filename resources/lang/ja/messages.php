@@ -34,5 +34,8 @@ return [
     'languages' => '言語',
     'Update' => '変更する',
     'deleteaccount' => 'アカウントを削除する',
-    'OR' => 'もしくは'
-];
+    'OR' => 'もしくは',
+    'ATTTENTION' => '注意',
+    'Please clear all your posts before deleting account!' => 'アカウントを削除するには、全ての投稿の削除が必要です。',
+    'back' => '戻る'
+    ];

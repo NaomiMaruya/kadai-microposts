@@ -12,13 +12,16 @@
             <ul class="navbar-nav">
                 
                 @if (Auth::check())
-                    {{-- ユーザ一覧ページへのリンク --}}
-                    <li class="nav-item">{!! link_to_route('users.index', __('messages.users'), [], ['class' => 'nav-link']) !!}</li>
+                    
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
                                 {{-- ユーザ詳細ページへのリンク --}}
                                 <li class="dropdown-item">{!! link_to_route('users.show', __('messages.My profile'), ['user' => Auth::id()]) !!}</li>
+                                {{-- follow一覧 --}}
+                                <li class="dropdown-item">{!! link_to_route('users.followings', __('messages.Followings'), ['id' => Auth::id() ]) !!}</li>
+                                {{-- follower一覧 --}}
+                                <li class="dropdown-item">{!! link_to_route('users.followers', __('messages.Followers'), ['id' => Auth::id() ]) !!}</li>
                                 {{-- お気に入り一覧へのリンク --}}
                                 <li class="dropdown-item">{!! link_to_route('users.favorites', __('messages.Favorites'),['id' => Auth::id() ]) !!}</li>
                             <li class="dropdown-divider"></li>
@@ -26,6 +29,8 @@
                                 <li class="dropdown-item">{!! link_to_route('logout.get', __('messages.Logout')) !!}</li>
                         </ul>
                     </li>
+                    {{-- ユーザ一覧ページへのリンク --}}
+                    <li class="nav-item">{!! link_to_route('users.index', __('messages.users'), [], ['class' => 'nav-link']) !!}</li>
                 @else
                     {{-- ユーザ登録ページへのリンク --}}
                     <li class="nav-item">{!! link_to_route('signup.get', __('messages.signup'), [], ['class' => 'nav-link']) !!}</li>

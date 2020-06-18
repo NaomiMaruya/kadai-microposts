@@ -34,6 +34,9 @@ return [
     'languages' => 'Languages',
     'Update' => 'Update',
     'deleteaccount' => 'Delete your Account',
-    'OR' => 'OR'
+    'OR' => 'OR',
+    'ATTTENTION' => 'ATTTENTION!',
+    'Please clear all your posts before deleting account!' => 'Please clear all your posts before deleting account!',
+    'back' => 'back'
 ];
 

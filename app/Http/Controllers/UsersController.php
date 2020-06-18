@@ -149,10 +149,16 @@ class UsersController extends Controller
     {
         // idの値で投稿を検索して取得
         $user = User::findOrFail($id);
+        // $microposts = $user->microposts();
 
         // 認証済みユーザ（閲覧者）がその投稿の所有者である場合は、投稿を削除
-        if (\Auth::id() === $user->id) {
+        if ($user->microposts_counts == 0){
+            // \Auth::id() === $user->id
+        // && $user->microposts_counts =0) 
             $user->delete();
+             
+        }else{
+             return view('users.alert');;
         }
 
         // 前のURLへリダイレクトさせる
